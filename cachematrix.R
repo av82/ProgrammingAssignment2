@@ -2,7 +2,9 @@
 ## functions do
 
 ## Write a short comment describing this function
-
+## This function makeCacheMatrix takes a matrix,provides a list of 
+# functions set to set passed in matrix to local variable x 
+ 
 makeCacheMatrix<-function(x=matrix()){
 	m <- NULL
 	set <- function(y) {
@@ -16,6 +18,9 @@ makeCacheMatrix<-function(x=matrix()){
      		setInverse = setcacheSolve,
 		     getInverse = getcacheSolve)
 }
+#cacheSolve computes the invers of special matrix with attached functions set,get,setInverse,getInverse.
+#if inverse is not null or already computed, simply returns it 
+# else computes the inverse for data and sets its inverse using setInverse
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
